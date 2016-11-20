@@ -1,6 +1,5 @@
-FROM qnib/alpn-jdk8
+FROM kuehn/alpn-jdk8
 
-ARG JDK="8u111-b14"
 ARG OH_TARGET_URL=https://bintray.com/openhab/mvn
 ENV OPENHAB_HOME=/opt/openhab/ \
     OPENHAB_HTTP_PORT=8080 \
