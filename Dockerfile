@@ -14,3 +14,4 @@ ADD opt/openhab/configurations/ /opt/openhab/configurations/
 ADD opt/openhab/conf/ /opt/openhab/conf/
 ADD opt/qnib/openhab/bin/start.sh /opt/qnib/openhab/bin/start.sh
 
+CMD /opt/openhab/start.sh
