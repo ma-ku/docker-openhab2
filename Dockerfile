@@ -6,7 +6,7 @@ ENV OPENHAB_HOME=/opt/openhab/ \
     TERM=xterm
 ARG OH_VER=2.0.0-SNAPSHOT
 RUN mkdir -p /opt/openhab/ \
- && wget -qO openhab-download.zip "${OH_TARGET_URL}/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab-offline%2F${OH_VER}%2Fopenhab-offline-${OH_VER}.zip" \
+ && wget -qO openhab-download.zip "https://openhab.ci.cloudbees.com/job/openHAB-Distribution/lastSuccessfulBuild/artifact/distributions/openhab-offline/target/openhab-offline-${OH_VER}.zip" \
  && unzip openhab-download.zip -d /opt/openhab/ \
  && rm -f openhab-download.zip
 ADD etc/supervisord.d/*.ini /etc/supervisord.d/
