@@ -4,7 +4,7 @@ ARG OH_TARGET_URL=https://bintray.com/openhab/mvn
 ENV OPENHAB_HOME=/opt/openhab/ \
     OPENHAB_HTTP_PORT=8080 \
     TERM=xterm
-ARG OH_VER=2.0.0.b4
+ARG OH_VER=2.0.0-SNAPSHOT
 RUN mkdir -p /opt/openhab/ \
  && wget -qO openhab-download.zip "${OH_TARGET_URL}/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab-offline%2F${OH_VER}%2Fopenhab-offline-${OH_VER}.zip" \
  && unzip openhab-download.zip -d /opt/openhab/ \
